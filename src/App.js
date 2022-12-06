@@ -28,7 +28,8 @@ class App extends React.Component {
             <h1> Pleses wait some time.... </h1> </div>;
         return (
             <div className="App">
-                <h1> Fetch data from an api in react, made for the pourpuse of testing Api Call</h1> {
+                <h1> Fetch data from an api in react,</h1>
+                <h1>made for the pourpuse of testing Api Call</h1> {
                     items.map((item) => (
                         <ol key={item.id} >
                             User_Name: {item.username},
