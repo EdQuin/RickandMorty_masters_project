@@ -1,21 +1,38 @@
-build-job:
+image: node:latest
+
+stages:         
+  - install
+  - test
+  - build
+
+install:   
+  stage: install
+  script:
+    - npm install
+    - echo "Installing is done!"
+  artifacts:
+    paths:
+      - node_modules/
+
+lint-job:   
+  stage: test    
+  script:
+    - npm run lint
+    - echo "Linting code running... ."
+
+prettier-job:   
+  stage: test    
+  script:
+    - npm run prettier
+    - echo "Prettier code running... ."
+
+build:          
   stage: build
   script:
-    - echo "Hello, $GITLAB_USER_LOGIN!"
-
-test-job1:
-  stage: test
-  script:
-    - echo "This job tests something"
-
-test-job2:
-  stage: test
-  script:
-    - echo "This job tests something, but takes more time than test-job1."
-    - echo "After the echo commands complete, it runs the sleep command for 20 seconds"
-    - echo "which simulates a test that runs 20 seconds longer than test-job1"
-
-deploy-prod:
-  stage: deploy
-  script:
-    - echo "This job deploys something from the $CI_COMMIT_BRANCH branch."
+    - npm run build
+    - echo "Building site"
+  artifacts:
+    paths:
+      - out/
+  rules:
+      - if: "$CI_COMMIT_BRANCH == 'main'"
