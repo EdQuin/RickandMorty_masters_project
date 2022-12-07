@@ -2,7 +2,6 @@ import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import "./App.css";
 
 export default function App () {
   
@@ -32,8 +31,6 @@ export default function App () {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
             </Routes>
-            <h1> Fetch data from an api in react,</h1>
-            <h1>made for the pourpuse of testing Api Call</h1>
         </div>
     );
 
