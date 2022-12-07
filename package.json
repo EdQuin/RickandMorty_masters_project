@@ -1,4 +1,4 @@
-npm {
+{
   "name": "api_testing",
   "version": "0.1.0",
   "private": true,
@@ -37,7 +37,6 @@ npm {
     ]
   },
   "devDependencies": {
-    "eslint": "^8.29.0",
-    "eslint-plugin-react": "^7.31.11"
+    "prettier": "2.8.0"
   }
 }

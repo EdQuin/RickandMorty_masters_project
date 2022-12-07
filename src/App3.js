@@ -1,12 +1,12 @@
 import React from "react";
-import './App.css';
+import "./App.css";
 import useFetch from "react-fetch-hook";
 
-function App3 () {
-
-    const { data } = useFetch("https://api.disneyapi.dev/character?name=Donald%20Duck");
-    console.log(data);
-
+function App3() {
+  const { data } = useFetch(
+    "https://api.disneyapi.dev/character?name=Donald%20Duck"
+  );
+  console.log(data);
 }
 export default App3;
 /**
