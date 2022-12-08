@@ -2,6 +2,8 @@ import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import { Navi, Main, NavLi, NavUl, NavImg } from "./styles";
+import portal from "./assets/portal_gif.gif"
 
 export default function App () {
   
@@ -16,22 +18,27 @@ export default function App () {
     .catch((err) => console.log(err));
   
     return (
-        <div className="App">
-            <nav>
-                <ul>
-                    <li>
+        <Main>
+            <Navi>
+                <NavUl>
+                    <NavImg src={portal} alt="portal logo"></NavImg>
+                    <NavLi>
                         <Link to="/">Home</Link>
-                    </li>
-                    <li>
+                    </NavLi>
+                    <NavLi>
+                        <Link to="/show">Show</Link>
+                    </NavLi>
+                    <NavLi>
                         <Link to="/about">About</Link>
-                    </li>
-                </ul>
-            </nav>
+                    </NavLi>
+                </NavUl>
+            </Navi>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/show" element={<About />} />
             </Routes>
-        </div>
+        </Main>
     );
 
 }
