@@ -4,9 +4,12 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import { Navi, Main, NavLi, NavUl, NavImg } from "./styles";
 import portal from "./assets/portal_gif.gif"
+//import { useState } from "react";
 
 export default function App () {
   
+    //const [obj, setObj] = useState("testing");
+
     fetch('https://rickandmortyapi.com/api/character')
     .then((res) =>{
       if (res.ok) {
@@ -16,7 +19,6 @@ export default function App () {
     })
     .then((res) => console.log(res))
     .catch((err) => console.log(err));
-  
     return (
         <Main>
             <Navi>
