@@ -4,8 +4,10 @@ import { PrimeText, HomeImg } from "../styles";
 import Fundo from "../assets/fundo.jpg"
 
 
-export default function Home (){
+export default function Home (info){
 
+const data = info.props.results;
+console.log("home", data)
     return (
         <div style={{ display: "flex"}}>
             <div style={{ display: "inline" }}>

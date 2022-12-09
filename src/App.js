@@ -4,21 +4,33 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import { Navi, Main, NavLi, NavUl, NavImg } from "./styles";
 import portal from "./assets/portal_gif.gif"
-//import { useState } from "react";
+//import { createStore } from 'redux';
+import {   useState, useEffect } from "react";
 
-export default function App () {
-  
-    //const [obj, setObj] = useState("testing");
+const url= `https://rickandmortyapi.com/api/character`;
 
-    fetch('https://rickandmortyapi.com/api/character')
-    .then((res) =>{
-      if (res.ok) {
-        return res.json();
-      }
-      throw new Error("Server not working");
-    })
-    .then((res) => console.log(res))
-    .catch((err) => console.log(err));
+
+export default function App() {
+
+    const [info, setInfo] = useState("testing");
+
+    useEffect(() => {
+        loadData();
+    }, [])
+    
+    const loadData = async () => {
+        await fetch(url)
+            .then((res) => {
+                if (res.ok) {
+                    return res.json();
+                }
+                throw new Error("Server not working");
+            })
+            //.then((res) => console.log(res.results))
+            .then((res) => {setInfo(res)})
+            .catch((err) => console.log(err));
+    }
+console.log(info.results)
     return (
         <Main>
             <Navi>
@@ -36,7 +48,7 @@ export default function App () {
                 </NavUl>
             </Navi>
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Home props={info}/>} />
                 <Route path="/about" element={<About />} />
                 <Route path="/show" element={<About />} />
             </Routes>
@@ -44,3 +56,42 @@ export default function App () {
     );
 
 }
+
+/*
+
+
+//STORE => Globalized state
+
+//ACTION Isto vai utilizar um valor da store e fzer algo com ele
+
+const increment = ()=> {
+    return{
+        type: 'INCREMENT'
+    }
+}
+const decrement = ()=> {
+    return{
+        type: 'DECREMENT'
+    }
+}
+
+//REDUCER  Em função da action determina o que irá acontecer na App
+
+const counter = (state=0,  action) => {
+    switch(action.type){
+        case "INCREMENT":
+            return state + 1;
+        case "DECREMENT":
+            return state - 1;
+    }
+};
+
+let store = createStore(counter)
+
+//Display in the console
+store.subscribe(()=> console.log(store.getState()));
+
+//DISPATCH
+store.dispatch(increment())
+
+*/
