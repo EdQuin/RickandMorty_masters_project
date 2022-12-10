@@ -2,13 +2,14 @@ import React from "react";
 import { Title } from "../styles";
 import { PrimeText, HomeImg } from "../styles";
 import Fundo from "../assets/fundo.jpg"
+import ShowObjects from "./ShowObjects";
 
 
-export default function Home (info){
-
-const data = info.props.results;
-console.log("home", data)
+export default function Home (props){
+    const data = props;
+console.log("home",data)
     return (
+        <div>
         <div style={{ display: "flex"}}>
             <div style={{ display: "inline" }}>
                 <HomeImg src={Fundo} alt="Rick and Morty">
@@ -28,7 +29,11 @@ console.log("home", data)
                     consectetur adipiscing elit. Pellentesque sollicitudin orci in
                     diam posuere vestibulum.
                 </PrimeText></div>
+                
         </div>
+        <ShowObjects data={data}></ShowObjects>
+        </div>
+        
     )
     
 }
