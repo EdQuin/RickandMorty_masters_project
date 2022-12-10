@@ -81,3 +81,14 @@ width: 600px;
 heigth: 600px;
 object-fit: contain;
 `;
+export const Caracters = styled.li`
+display: flex;
+flex-wrap: wrap;
+margin: auto;
+justify-content: space-between;
+
+font-family: 'Boogaloo';
+font-style: normal;
+font-size: 30px;
+color: #50EE05;
+`;

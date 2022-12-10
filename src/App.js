@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import { Navi, Main, NavLi, NavUl, NavImg } from "./styles";
 import portal from "./assets/portal_gif.gif"
-//import { createStore } from 'redux';
 import {   useState, useEffect } from "react";
 
 const url= `https://rickandmortyapi.com/api/character`;
