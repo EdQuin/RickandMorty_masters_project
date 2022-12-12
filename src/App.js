@@ -5,16 +5,20 @@ import About from "./pages/About";
 import { Navi, Main, NavLi, NavUl, NavImg } from "./styles";
 import portal from "./assets/portal_gif.gif"
 import {   useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { addCaracters } from "./pages/hiper-store/caracterSlice";
 
 const url= `https://rickandmortyapi.com/api/character`;
 
 
 export default function App() {
 
+    const dispatch = useDispatch();
     const [info, setInfo] = useState("testing");
 
     useEffect(() => {
         loadData();
+
     }, [])
     
     const loadData = async () => {
@@ -28,8 +32,11 @@ export default function App() {
             //.then((res) => console.log(res.results))
             .then((res) => {setInfo(res)})
             .catch((err) => console.log(err));
+           dispatch(addCaracters(info));
+            console.log("inside loaddata",info)
     }
-console.log(info.results)
+     
+console.log("outside loaddata",info.results)
     return (
         <Main>
             <Navi>

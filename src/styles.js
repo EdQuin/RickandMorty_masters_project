@@ -84,11 +84,25 @@ object-fit: contain;
 export const Caracters = styled.li`
 display: flex;
 flex-wrap: wrap;
-margin: auto;
+margin: 40px;
 justify-content: space-between;
 
 font-family: 'Boogaloo';
 font-style: normal;
 font-size: 30px;
 color: #50EE05;
+`;
+export const Caractercard = styled.div`
+border: 5px solid #50EE05;
+padding: 30px;
+margin-top: 20px;
+list-style-type: none;
+font-size: 3vh;
+`;
+export const AboutText = styled.p`
+font-family: 'Boogaloo';
+font-style: normal;
+font-size: 40px;
+color: #50EE05;
+
 `;
