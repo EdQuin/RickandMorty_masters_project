@@ -1,14 +1,20 @@
 import React from "react";
-import { Title } from "../styles";
+import { Title, AboutText } from "../styles";
+import portal from "../assets/portal.jpg"
 
-export default function About (){
+export default function About() {
 
     return (
         <div>
-        <Title>This is About</Title>
-        <h1>Here will be presented more detail info</h1>
-        <h1>Top image and much more</h1>
+            <div style={{textAlign: "center", display:"block"}}>
+                <Title>Mini projeto - Tecnolgias de Desenvolvimento Web</Title>
+                <img src={portal}></img>
+            </div>
+            <div style={{textAlign: "center"}}>
+                <AboutText>Mini - projeto desenvolvido para consumir informação a partir de uma API externa.</AboutText>
+                <AboutText>Objetivo principal: Criação de aplicação React.js utilizando React Redux para a gestão dos estados.</AboutText>
+            </div>
         </div>
     )
-    
+
 }

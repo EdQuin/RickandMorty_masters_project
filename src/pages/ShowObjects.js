@@ -1,5 +1,5 @@
 import React from "react";
-import { Caracters } from "../styles";
+import { Caracters, Caractercard } from "../styles";
 
 export default function ShowObjects (data){
 
@@ -12,9 +12,15 @@ export default function ShowObjects (data){
         {
             cards?.map((caracter)=>{
                 return (
-                <li key={caracter.id}>
+                    <Caractercard key={caracter.id}>
+                        <img src={caracter.image}></img>
+                <li>
                     {caracter.name}
                 </li>
+                <li>
+                    {caracter.origin.name}
+                </li>
+                </Caractercard>
                 );
             })
         }
