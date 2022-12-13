@@ -2,7 +2,7 @@ import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import { Navi, Main, NavLi, NavUl, NavImg } from "./styles";
+import { Navi, Main, NavLi, NavUl, NavImg } from "./styles/styles";
 import portal from "./assets/portal_gif.gif"
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
