@@ -4,39 +4,17 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import { Navi, Main, NavLi, NavUl, NavImg } from "./styles";
 import portal from "./assets/portal_gif.gif"
-import {   useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { addCaracters } from "./pages/hiper-store/caracterSlice";
-
-const url= `https://rickandmortyapi.com/api/character`;
-
+import { fetchCharacters } from "./store/characterSlice";
 
 export default function App() {
-
     const dispatch = useDispatch();
-    const [info, setInfo] = useState("testing");
 
     useEffect(() => {
-        loadData();
-
+        dispatch(fetchCharacters());
     }, [])
-    
-    const loadData = async () => {
-        await fetch(url)
-            .then((res) => {
-                if (res.ok) {
-                    return res.json();
-                }
-                throw new Error("Server not working");
-            })
-            //.then((res) => console.log(res.results))
-            .then((res) => {setInfo(res)})
-            .catch((err) => console.log(err));
-           dispatch(addCaracters(info));
-            console.log("inside loaddata",info)
-    }
-     
-console.log("outside loaddata",info.results)
+
     return (
         <Main>
             <Navi>
@@ -54,7 +32,7 @@ console.log("outside loaddata",info.results)
                 </NavUl>
             </Navi>
             <Routes>
-                <Route path="/" element={<Home props={info}/>} />
+                <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/show" element={<About />} />
             </Routes>
