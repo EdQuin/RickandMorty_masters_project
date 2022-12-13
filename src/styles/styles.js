@@ -3,15 +3,19 @@ import styled from "styled-components";
 export const FooterBox = styled.footer`
 width: 100%;
 height: 350px;
-background: #111;
+background: #000000;
 position: fixed-bottom; left: 0; bottom: 0;
 
- 
+border-top: 5px solid #50EE05;
 color: #696969;
 column-count: 2;
 column-gap: 50px;
 font-size: 1em;
 font-weight: 300;
+
+width: 850px; 
+margin: auto; /* Same height as footer */
+padding: 100px 0;
 `;
 
 export const Main = styled.main`
