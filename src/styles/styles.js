@@ -1,5 +1,19 @@
 import styled from "styled-components";
 
+export const FooterBox = styled.footer`
+width: 100%;
+height: 350px;
+background: #111;
+position: fixed-bottom; left: 0; bottom: 0;
+
+ 
+color: #696969;
+column-count: 2;
+column-gap: 50px;
+font-size: 1em;
+font-weight: 300;
+`;
+
 export const Main = styled.main`
 width: 100%;
 height: 100%;
@@ -23,7 +37,11 @@ color: #50EE05;
 padding-top: 20px;
 text-align: left;
 `;
-export const PrimeText = styled.p`
+export const HomeContainer = styled.div`
+display: flex;
+margin: 3vh;
+`;
+export const HomeText = styled.p`
 font-family: 'Boogaloo';
 font-style: normal;
 font-weight: 100;
@@ -81,7 +99,7 @@ width: 600px;
 heigth: 600px;
 object-fit: contain;
 `;
-export const Caracters = styled.li`
+export const Characters = styled.li`
 display: flex;
 flex-wrap: wrap;
 margin: 40px;
@@ -92,12 +110,18 @@ font-style: normal;
 font-size: 30px;
 color: #50EE05;
 `;
-export const Caractercard = styled.div`
+export const Charactercard = styled.div`
 border: 5px solid #50EE05;
 padding: 30px;
 margin-top: 20px;
 list-style-type: none;
-font-size: 3vh;
+font-size: 2.5vh;
+transition: all 0.3s;
+
+&:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
 `;
 export const AboutText = styled.p`
 font-family: 'Boogaloo';
