@@ -44,7 +44,7 @@ text-align: left;
 `;
 export const HomeContainer = styled.div`
 display: flex;
-margin: 3vh;
+margin: 4vh;
 `;
 export const HomeText = styled.p`
 font-family: 'Boogaloo';
@@ -118,7 +118,9 @@ color: #50EE05;
 export const Charactercard = styled.div`
 border: 5px solid #50EE05;
 padding: 30px;
-margin-top: 20px;
+text-align:
+margin: 20px;
+margin-bottom: 40px;
 list-style-type: none;
 font-size: 2.5vh;
 transition: all 0.3s;
@@ -133,4 +135,22 @@ font-family: 'Boogaloo';
 font-style: normal;
 font-size: 40px;
 color: #50EE05;
+`;
+
+export const DetailContainer = styled.div`
+display: flex;
+flex-wrap: wrap;
+margin: 50px;
+whidth: 600px;
+font-family: 'Boogaloo';
+font-style: normal;
+font-size: 30px;
+color: #50EE05;
+list-style-type: none;
+img {
+    width:50%;
+}
+`;
+export const DetailInfo = styled.div`
+padding: 50px;
 `;
