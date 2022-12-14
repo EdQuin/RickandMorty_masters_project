@@ -10,23 +10,21 @@ import NavBar from "./components/nav";
 import Details from "./pages/Details";
 
 export default function App() {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(fetchCharacters());
-    }, [])
+  useEffect(() => {
+    dispatch(fetchCharacters());
+  }, []);
 
-    return (
-        <Main>
-            <NavBar/>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/show" element={<About />} />
-                <Route path="/pages/Details/:id" element={<Details />} />
-            </Routes>
-        </Main>
-    );
-
+  return (
+    <Main>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/show" element={<About />} />
+        <Route path="/pages/Details/:id" element={<Details />} />
+      </Routes>
+    </Main>
+  );
 }
-
