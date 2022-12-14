@@ -1,11 +1,11 @@
 image: node:latest
 
-stages:         
+stages:
   - install
   - test
   - build
 
-install:   
+install:
   stage: install
   script:
     - npm install
@@ -15,18 +15,19 @@ install:
       - node_modules/
     expire_in: 30min
 
-lint-job:   
-  stage: test    
+lint-job:
+  stage: test
   script:
     - npm run lint
     - echo "Linting code running... ."
 
-prettier-job:   
-  stage: test    
+prettier-job:
+  stage: test
   script:
+    - npm run prettier
     - echo "Prettier code running... ."
 
-build:          
+build:
   stage: build
   script:
     - echo "Building site"
@@ -34,4 +35,4 @@ build:
     paths:
       - out/
   rules:
-      - if: "$CI_COMMIT_BRANCH == 'main'"
+    - if: "$CI_COMMIT_BRANCH == 'main'"

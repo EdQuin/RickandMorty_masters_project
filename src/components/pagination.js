@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Test } from "../styles/styles";
 
 function Pagination() {
-
   // State to store count value
   const [count, setCount] = useState(0);
 
