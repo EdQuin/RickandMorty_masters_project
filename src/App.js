@@ -1,12 +1,13 @@
 import React from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import { Navi, Main, NavLi, NavUl, NavImg } from "./styles/styles";
-import portal from "./assets/portal_gif.gif"
+import { Main } from "./styles/styles";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchCharacters } from "./store/characterSlice";
+import NavBar from "./components/nav";
+import Details from "./pages/Details";
 
 export default function App() {
     const dispatch = useDispatch();
@@ -17,65 +18,15 @@ export default function App() {
 
     return (
         <Main>
-            <Navi>
-                <NavUl>
-                    <NavImg src={portal} alt="portal logo"></NavImg>
-                    <NavLi>
-                        <Link to="/">Home</Link>
-                    </NavLi>
-                    <NavLi>
-                        <Link to="/show">Show</Link>
-                    </NavLi>
-                    <NavLi>
-                        <Link to="/about">About</Link>
-                    </NavLi>
-                </NavUl>
-            </Navi>
+            <NavBar/>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/show" element={<About />} />
+                <Route path="/pages/Details/:id" element={<Details />} />
             </Routes>
         </Main>
     );
 
 }
 
-/*
-
-
-//STORE => Globalized state
-
-//ACTION Isto vai utilizar um valor da store e fzer algo com ele
-
-const increment = ()=> {
-    return{
-        type: 'INCREMENT'
-    }
-}
-const decrement = ()=> {
-    return{
-        type: 'DECREMENT'
-    }
-}
-
-//REDUCER  Em função da action determina o que irá acontecer na App
-
-const counter = (state=0,  action) => {
-    switch(action.type){
-        case "INCREMENT":
-            return state + 1;
-        case "DECREMENT":
-            return state - 1;
-    }
-};
-
-let store = createStore(counter)
-
-//Display in the console
-store.subscribe(()=> console.log(store.getState()));
-
-//DISPATCH
-store.dispatch(increment())
-
-*/
