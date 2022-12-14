@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const initialState = {}
-const url = `https://rickandmortyapi.com/api/character`;
+const url = `https://rickandmortyapi.com/api/character?page=2`;
 
 export const fetchCharacters = createAsyncThunk(
     'characters/fetchCharacters',
