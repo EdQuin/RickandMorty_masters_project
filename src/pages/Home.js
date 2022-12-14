@@ -4,6 +4,7 @@ import { HomeText, HomeImg, HomeContainer } from "../styles/styles";
 import Fundo from "../assets/fundo.jpg"
 import CharacterList from "../components/characterList";
 import Footer from "../components/footer";
+import Pagination from "../components/pagination";
 
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
 
             </HomeContainer>
             <CharacterList />
+            <Pagination/>
             <Footer />
         </div>
 

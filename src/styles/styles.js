@@ -164,3 +164,15 @@ export const DetailInfo = styled.div`
 padding: 50px;
 `;
 
+export const Test = styled.div`
+font-family: sans-serif;
+color: #50EE05;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+`;
+

@@ -3,3 +3,6 @@
 **/.hg
 **/node_modules
 **/.html
+
+package.json
+package-lock.json

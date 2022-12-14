@@ -1,0 +1,32 @@
+image: node:latest
+
+stages:         
+  - install
+  - test
+  - build
+
+install:   
+  stage: install
+  script:
+    - echo "Installing is done!"
+
+lint-job:   
+  stage: test    
+  script:
+    - npm run lint
+    - echo "Linting code running... ."
+
+prettier-job:   
+  stage: test    
+  script:
+    - echo "Prettier code running... ."
+
+build:          
+  stage: build
+  script:
+    - echo "Building site"
+  artifacts:
+    paths:
+      - out/
+  rules:
+      - if: "$CI_COMMIT_BRANCH == 'main'"
