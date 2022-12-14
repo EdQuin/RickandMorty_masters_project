@@ -8,6 +8,7 @@ import Pagination from "../components/pagination";
 
 export default function Home() {
 
+
     return (
         <div>
                 <HomeContainer>
@@ -28,7 +29,7 @@ export default function Home() {
                     </div>
                 </HomeContainer>
                 <CharacterList />
-                <Pagination />
+                <Pagination/>
             <Footer />
         </div>
     );

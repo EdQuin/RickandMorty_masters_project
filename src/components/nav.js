@@ -12,9 +12,6 @@ export default function NavBar() {
           <Link to="/">Home</Link>
         </NavLi>
         <NavLi>
-          <Link to="/show">Show</Link>
-        </NavLi>
-        <NavLi>
           <Link to="/about">About</Link>
         </NavLi>
       </NavUl>
