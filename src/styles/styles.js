@@ -118,7 +118,7 @@ color: #50EE05;
 export const Charactercard = styled.div`
 border: 5px solid #50EE05;
 padding: 30px;
-text-align:
+text-align: center;
 margin: 20px;
 margin-bottom: 40px;
 list-style-type: none;
@@ -130,11 +130,20 @@ transition: all 0.3s;
     transition: all 0.3s;
 }
 `;
-export const AboutText = styled.p`
+export const AboutTitle = styled.h1`
 font-family: 'Boogaloo';
 font-style: normal;
 font-size: 40px;
 color: #50EE05;
+align-self: center;
+padding: 50px
+`;
+export const AboutText = styled.p`
+font-family: 'Boogaloo';
+font-style: normal;
+font-size: 30px;
+color: #50EE05;
+padding: 50px
 `;
 
 export const DetailContainer = styled.div`
@@ -154,3 +163,4 @@ img {
 export const DetailInfo = styled.div`
 padding: 50px;
 `;
+
