@@ -11,7 +11,7 @@ export default function About() {
                 <Title>Mini projeto - Tecnolgias de Desenvolvimento Web</Title>
                 <img src={portal}></img>
             </div>
-            <div style={{ textAlign: "center" }}>
+            <div>
                 <AboutText>Mini - projeto desenvolvido para consumir informação a partir de uma API externa.</AboutText>
                 <AboutText>Objetivo principal: Criação de aplicação React.js utilizando React Redux para a gestão dos estados.</AboutText>
             </div>

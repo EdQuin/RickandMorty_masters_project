@@ -2,7 +2,7 @@ import React from "react";
 import { Title } from "../styles/styles";
 import { HomeText, HomeImg, HomeContainer } from "../styles/styles";
 import Fundo from "../assets/fundo.jpg"
-import ShowObjects from "../components/characterList";
+import CharacterList from "../components/characterList";
 import Footer from "../components/footer";
 
 
@@ -28,7 +28,7 @@ export default function Home() {
                     </HomeText></div>
 
             </HomeContainer>
-            <ShowObjects/>
+            <CharacterList/>
             <Footer/>
         </div>
 

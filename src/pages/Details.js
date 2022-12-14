@@ -1,7 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { Charactercard, Characters } from "../styles/styles";
+import Footer from "../components/footer";
+import { DetailContainer, DetailInfo } from "../styles/styles";
 
 
 export default function Details() {
@@ -14,24 +15,26 @@ export default function Details() {
         <div>
             {
                 characterDetail.results?.map((character) => {
-                    if  (character.id==id){
-                    return (
-                        <Charactercard style={{display: "block"}} key={character.id} >
+                    if (character.id == id) {
+                        window.scrollTo(0, 0);
+                        return (
+                            <DetailContainer key={character.id} >
                                 <img src={character.image}></img>
-                            <Characters>
-                                <li>{character.name}</li>
-                                <li>{character.origin.name}</li>
-                                <li>{character.status}</li>
-                                <li>{character.species}</li>
-                                <li>{character.gender}</li>
-                                <li>{character.location.name}</li>
-                            </Characters>
-                        </Charactercard>
+                                <DetailInfo>
+                                    <h1>{character.name}</h1>
+                                    <li>Origin Planet : {character.origin.name}</li>
+                                    <li>Status : {character.status}</li>
+                                    <li>Species : {character.species}</li>
+                                    <li>Gender : {character.gender}</li>
+                                    <li>Location : {character.location.name}</li>
+                                </DetailInfo>
+                            </DetailContainer>
 
-                    );
+                        );
                     }
                 })
             }
+            <Footer />
         </div>
     )
 }

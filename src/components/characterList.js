@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Characters, Charactercard, } from "../styles/styles";
 
-export default function ShowObjects() {
+export default function CharacterList() {
     const characters = useSelector((state) => state.characters);
     if (!characters || !characters.results?.length) return null;
 
@@ -20,9 +20,6 @@ export default function ShowObjects() {
                             </Link>
                             <li>
                                 {character.name}
-                            </li>
-                            <li>
-                                {character.origin.name}
                             </li>
                         </Charactercard>
 
