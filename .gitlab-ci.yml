@@ -8,7 +8,12 @@ stages:
 install:   
   stage: install
   script:
+    - npm install
     - echo "Installing is done!"
+  artifacts:
+    paths:
+      - node_modules/
+    expire_in: 30min
 
 lint-job:   
   stage: test    

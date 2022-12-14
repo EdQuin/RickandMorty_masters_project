@@ -23,6 +23,7 @@
     "test": "react-scripts jest",
     "eject": "react-scripts eject",
     "lint": "eslint ."
+    
   },
   "eslintConfig": {
     "extends": [
