@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Test } from "../styles/styles";
 
+
 function Pagination() {
+
   // State to store count value
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   // Function to increment count by 1
   const incrementCount = () => {

@@ -30,9 +30,10 @@ prettier-job:
 build:
   stage: build
   script:
+    - npm run build
     - echo "Building site"
   artifacts:
     paths:
-      - out/
+      - build/
   rules:
     - if: "$CI_COMMIT_BRANCH == 'main'"
