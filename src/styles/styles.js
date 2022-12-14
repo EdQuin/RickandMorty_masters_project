@@ -165,14 +165,19 @@ export const DetailInfo = styled.div`
   padding: 50px;
 `;
 
-export const Test = styled.div`
+export const PageControl = styled.div`
   font-family: sans-serif;
   color: #50ee05;
   display: flex;
+  padding-bottom: 30px;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   gap: 20px;
-  height: 100vh;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+`;
+export const Button = styled.button`
+padding: 1rem;
+cursor: pointer;
+background-color: #50ee05;
 `;

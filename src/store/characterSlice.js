@@ -1,12 +1,12 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const initialState = {};
-const url = `https://rickandmortyapi.com/api/character?page=4`;
+//const url = `https://rickandmortyapi.com/api/character?page=4`;
 
 export const fetchCharacters = createAsyncThunk(
   "characters/fetchCharacters",
-  async () => {
-    const response = await fetch(url);
+  async (count) => {
+    const response = await fetch(`https://rickandmortyapi.com/api/character?page=${count}`);
     if (!response.ok) return;
 
     return response.json();
