@@ -2,6 +2,11 @@
 
 Link para visualizar página: https://tdw-mp2-edgar-quintero.netlify.app/
 
+![Anotação 2023-02-20 100718](https://user-images.githubusercontent.com/86082190/220075530-e12876eb-4f82-460e-ad6d-7789b221def4.jpg)
+
+![Anotação 2023-02-20 100755](https://user-images.githubusercontent.com/86082190/220075559-c05e01aa-c5d4-46ee-b825-47b3f2621409.jpg)
+
+
 ## Getting started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
