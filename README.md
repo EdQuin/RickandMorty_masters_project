@@ -1,5 +1,7 @@
 # tdw-Mp2-edgar-quintero.tdw-mctw.dev
 
+Link para visualizar página: https://tdw-mp2-edgar-quintero.netlify.app/
+
 ## Getting started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
